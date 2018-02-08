@@ -1,0 +1,137 @@
+@base: 50px;
+@border_width: 4px;
+@offset_field_top: 50px;
+@offset_field_left: 50px;
+
+.container {width: 100%; height: 1200px; background-color: #eee;}
+.comment {opacity: 0; position: absolute; bottom: -150px; width: 100%; background-color: #000; color: #fff; text-align: center; transition: opacity 2s ease;}
+.hsquare .comment {opacity: 1;}
+.rotate1 {transform: rotate(0deg);}
+.rotate2 {transform: rotate(90deg);}
+.rotate3 {transform: rotate(180deg);}
+.rotate4 {transform: rotate(270deg);}
+.colored {background-color: #0ff; transform: rotate(90deg);}
+.boom {width: 400px; height: 200px;}
+.mirrorcont {transition: all 0.7s ease;}
+.mirror {transform: scale(-1, 1);}
+
+.profchoose {position: absolute; top: 1000px; left: 300px; height: 200px; width: 300px; background-color: #df2eb0; text-align: center;}
+
+.field { position: absolute; top: @offset_field_top - @border_width; left: @offset_field_left - @border_width; border: solid @border_width black; background-color: #ffffff; box-sizing: content-box;
+  .fieldblock {width: @base; height: @base; position: absolute; border: solid 1px #b8b8b8; box-sizing: border-box;}
+  .highlight {background-color: #fffeb7;}
+}
+
+
+.baseblock {position: absolute; width: @base; height: @base; pointer-events: auto;}
+.figcont {position: absolute; transition: transform 0.7s ease; pointer-events: none;}
+
+.fig1 {left: 200px; top: 400px; width: @base*3; height: @base*3;
+  .baseblock {background-color: #8a00af;}
+  .figure00 {left: 0; top: 0; }
+  .figure10 {left: @base; top: 0;}
+  .figure20 {left: @base*2; top: 0; }
+  .figure21 {left: @base*2; top: @base; }
+  .figure22 {left: @base*2; top: @base*2; }
+
+}
+
+.fig2 {left: 400px; top: 400px;  width: @base*3; height: @base*3;
+  .baseblock {background-color: #df00de;}
+  .figure00 {left: 0; top: 0;}
+  .figure10 {left: @base; top: 0;}
+  .figure20 {left: @base*2; top: 0;}
+  .figure11 {left: @base; top: @base;}
+  .figure12 {left: @base; top: @base*2;}
+}
+.fig3 {left: 600px; top: 400px; width: @base; height: @base*5;
+  .baseblock {background-color: #02d0ff;}
+  .figure00 {left: 0; top: 0;}
+  .figure01 {left: 0; top: @base;}
+  .figure02 {left: 0; top: @base*2;}
+  .figure03 {left: 0; top: @base*3;}
+  .figure04 {left: 0; top: @base*4;}
+
+}
+
+.fig4 {left: 700px; top: 400px; width: @base*3; height: @base*3;
+  .baseblock {background-color: rgb(253, 251, 255);}
+  .figure10 {left: @base; top: @base*0;}
+  .figure20 {left: @base*2; top: @base*0;}
+  .figure01 {left: @base*0; top: @base;}
+  .figure11 {left: @base; top: @base;}
+  .figure12 {left: @base; top: @base*2;}
+}
+
+.fig5 {left: 900px; top: 400px; width: @base*2; height: @base*4;
+  .baseblock {background-color: #00feff;}
+  .figure00 {left: @base*0; top: @base*0;}
+  .figure01 {left: @base*0; top: @base;}
+  .figure02 {left: @base*0; top: @base*2;}
+  .figure03 {left: @base*0; top: @base*3;}
+  .figure13 {left: @base; top: @base*3;}
+}
+
+.fig6 {left: 1050px; top: 400px; width: @base*2; height: @base*4;
+  .baseblock {background-color: #fff801;}
+  .figure00 {left: @base*0; top: @base*0;}
+  .figure01 {left: @base*0; top: @base;}
+  .figure02 {left: @base*0; top: @base*2;}
+  .figure12 {left: @base; top: @base*2;}
+  .figure13 {left: @base; top: @base*3;}
+}
+
+.fig7 {left: 1200px; top: 400px; width: @base*2; height: @base*3;
+  .baseblock {background-color: #000aef;}
+  .figure00 {left: @base*0; top: @base*0;}
+  .figure10 {left: @base; top: @base*0;}
+  .figure01 {left: @base*0; top: @base;}
+  .figure11 {left: @base; top: @base;}
+  .figure12 {left: @base; top: @base*2;}
+}
+
+
+.fig8 {left: 1400px; top: 400px; width: @base*3; height: @base*2;
+  .baseblock {background-color: #00f;}
+  .figure00 {left: @base*0; top: @base*0;}
+  .figure01 {left: @base*0; top: @base;}
+  .figure11 {left: @base; top: @base;}
+  .figure21 {left: @base*2; top: @base;}
+  .figure20 {left: @base*2; top: @base*0;}
+}
+
+.fig9 {left: 200px; top: 700px; width: @base*3; height: @base*3;
+  .baseblock {background-color: #0f0;}
+  .figure00 {left: @base*0; top: @base*0;}
+  .figure10 {left: @base; top: @base*0;}
+  .figure11 {left: @base; top: @base;}
+  .figure21 {left: @base*2; top: @base;}
+  .figure22 {left: @base*2; top: @base*2;}
+}
+
+.fig10 {left: 400px; top: 700px; width: @base*3; height: @base*3;
+  .baseblock {background-color: #f00;}
+  .figure10 {left: @base; top: @base*0;}
+  .figure01 {left: @base*0; top: @base;}
+  .figure11 {left: @base; top: @base;}
+  .figure21 {left: @base*2; top: @base;}
+  .figure12 {left: @base; top: @base*2;}
+}
+
+.fig11 {left: 600px; top: 700px; width: @base*2; height: @base*4;
+  .baseblock {background-color: #f00;}
+  .figure10 {left: @base; top: @base*0;}
+  .figure01 {left: @base*0; top: @base;}
+  .figure11 {left: @base; top: @base;}
+  .figure12 {left: @base; top: @base*2;}
+  .figure13 {left: @base; top: @base*3;}
+}
+
+.fig12 {left: 800px; top: 700px; width: @base*3; height: @base*3;
+  .baseblock {background-color: #00f;}
+  .figure00 {left: @base*0; top: @base*0;}
+  .figure10 {left: @base; top: @base*0;}
+  .figure11 {left: @base; top: @base;}
+  .figure12 {left: @base; top: @base*2;}
+  .figure22 {left: @base*2; top: @base*2;}
+}
