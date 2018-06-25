@@ -1,0 +1,150 @@
+body {
+  --base: 50px;
+  --border_width: 4px;
+  --offset_field_top: var(--base);
+  --offset_field_left: var(--base);
+}
+
+.container {width: 100%; height: 1230px; background-color: #eee;}
+.comment {opacity: 0; position: absolute; bottom: -150px; width: 100%; background-color: #000; color: #fff; text-align: center; transition: opacity 2s ease;}
+.hsquare .comment {opacity: 1;}
+.rotate1 {transform: rotate(0deg);}
+.rotate2 {transform: rotate(90deg);}
+.rotate3 {transform: rotate(180deg);}
+.rotate4 {transform: rotate(270deg);}
+.colored {background-color: #0ff; transform: rotate(90deg);}
+.mirrorcont {transition: all 0.7s ease;}
+.mirror {transform: scale(-1, 1);}
+
+.message {width: 20%; height: 20%; position: fixed; font-family: Arial; background-color: white; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; box-shadow: rgba(0,0,0,0.4) 10px 10px 30px; border-radius: 10px;
+  .message-text {font-size: 32px; text-align: center; color: red; }
+  .close-button {text-align: center; font-size: 16px; width: 40%; height: 50px; position: absolute; background-color: #bdbebd; bottom: 10%; left: 30%; border-radius: 5px;
+        .text-button {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+  }
+  .close-button:hover {background-color: #dddbd9;}
+}
+.message.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.profchoose {position: absolute; top: calc(var(--base)*20); left: calc(var(--base)*6); height: 200px; width: 300px; background-color: #df2eb0; text-align: center;}
+
+.field { position: absolute; top: var(--offset_field_top) - var(--border_width); left: var(--offset_field_left) - var(--border_width); border: solid var(--border_width) black; background-color: #ffffff; box-sizing: content-box;
+  .fieldblock {width: var(--base); height: var(--base); position: absolute; border: solid 1px #b8b8b8; box-sizing: border-box;}
+  .highlight {background-color: #fffeb7;}
+}
+
+
+.baseblock {position: absolute; width: var(--base); height: var(--base); pointer-events: auto;}
+.figcont {position: absolute; transition: transform 0.7s ease; pointer-events: none;}
+
+.fig1 {left: var(--base); top: var(--base)*8; width: var(--base)*3; height: var(--base)*3;
+  .baseblock {background-color: #8a00af;}
+  .figure00 {left: 0; top: 0; }
+  .figure10 {left: var(--base); top: 0;}
+  .figure20 {left: var(--base)*2; top: 0; }
+  .figure21 {left: var(--base)*2; top: var(--base); }
+  .figure22 {left: var(--base)*2; top: var(--base)*2; }
+
+}
+
+.fig2 {left: var(--base)*5; top: var(--base)*8;  width: var(--base)*3; height: var(--base)*3;
+  .baseblock {background-color: #df00de;}
+  .figure00 {left: 0; top: 0;}
+  .figure10 {left: var(--base); top: 0;}
+  .figure20 {left: var(--base)*2; top: 0;}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure12 {left: var(--base); top: var(--base)*2;}
+}
+.fig3 {left: var(--base)*9; top: var(--base)*8; width: var(--base); height: var(--base)*5;
+  .baseblock {background-color: #02d0ff;}
+  .figure00 {left: 0; top: 0;}
+  .figure01 {left: 0; top: var(--base);}
+  .figure02 {left: 0; top: var(--base)*2;}
+  .figure03 {left: 0; top: var(--base)*3;}
+  .figure04 {left: 0; top: var(--base)*4;}
+
+}
+
+.fig4 {left: var(--base)*11; top: var(--base)*8; width: var(--base)*3; height: var(--base)*3;
+  .baseblock {background-color: rgb(6, 0, 101);}
+  .figure10 {left: var(--base); top: var(--base)*0;}
+  .figure20 {left: var(--base)*2; top: var(--base)*0;}
+  .figure01 {left: var(--base)*0; top: var(--base);}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure12 {left: var(--base); top: var(--base)*2;}
+}
+
+.fig5 {left: var(--base)*15; top: var(--base)*8; width: var(--base)*2; height: var(--base)*4;
+  .baseblock {background-color: #540016;}
+  .figure00 {left: var(--base)*0; top: var(--base)*0;}
+  .figure01 {left: var(--base)*0; top: var(--base);}
+  .figure02 {left: var(--base)*0; top: var(--base)*2;}
+  .figure03 {left: var(--base)*0; top: var(--base)*3;}
+  .figure13 {left: var(--base); top: var(--base)*3;}
+}
+
+.fig6 {left: var(--base)*18; top: var(--base)*8; width: var(--base)*2; height: var(--base)*4;
+  .baseblock {background-color: #fff801;}
+  .figure00 {left: var(--base)*0; top: var(--base)*0;}
+  .figure01 {left: var(--base)*0; top: var(--base);}
+  .figure02 {left: var(--base)*0; top: var(--base)*2;}
+  .figure12 {left: var(--base); top: var(--base)*2;}
+  .figure13 {left: var(--base); top: var(--base)*3;}
+}
+
+.fig7 {left: var(--base); top: var(--base)*14; width: var(--base)*2; height: var(--base)*3;
+  .baseblock {background-color: #000aef;}
+  .figure00 {left: var(--base)*0; top: var(--base)*0;}
+  .figure10 {left: var(--base); top: var(--base)*0;}
+  .figure01 {left: var(--base)*0; top: var(--base);}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure12 {left: var(--base); top: var(--base)*2;}
+}
+
+
+.fig8 {left: var(--base)*4; top: var(--base)*14; width: var(--base)*3; height: var(--base)*2;
+  .baseblock {background-color: #15720b;}
+  .figure00 {left: var(--base)*0; top: var(--base)*0;}
+  .figure01 {left: var(--base)*0; top: var(--base);}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure21 {left: var(--base)*2; top: var(--base);}
+  .figure20 {left: var(--base)*2; top: var(--base)*0;}
+}
+
+.fig9 {left: var(--base)*8; top: var(--base)*14; width: var(--base)*3; height: var(--base)*3;
+  .baseblock {background-color: #0f0;}
+  .figure00 {left: var(--base)*0; top: var(--base)*0;}
+  .figure10 {left: var(--base); top: var(--base)*0;}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure21 {left: var(--base)*2; top: var(--base);}
+  .figure22 {left: var(--base)*2; top: var(--base)*2;}
+}
+
+.fig10 {left: var(--base)*12; top: var(--base)*14; width: var(--base)*3; height: var(--base)*3;
+  .baseblock {background-color: #f00;}
+  .figure10 {left: var(--base); top: var(--base)*0;}
+  .figure01 {left: var(--base)*0; top: var(--base);}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure21 {left: var(--base)*2; top: var(--base);}
+  .figure12 {left: var(--base); top: var(--base)*2;}
+}
+
+.fig11 {left: var(--base)*16; top: var(--base)*14; width: var(--base)*2; height: var(--base)*4;
+  .baseblock {background-color: #ffc822;}
+  .figure10 {left: var(--base); top: var(--base)*0;}
+  .figure01 {left: var(--base)*0; top: var(--base);}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure12 {left: var(--base); top: var(--base)*2;}
+  .figure13 {left: var(--base); top: var(--base)*3;}
+}
+
+.fig12 {left: var(--base)*19; top: var(--base)*14; width: var(--base)*3; height: var(--base)*3;
+  .baseblock {background-color: #c661ff;}
+  .figure00 {left: var(--base)*0; top: var(--base)*0;}
+  .figure10 {left: var(--base); top: var(--base)*0;}
+  .figure11 {left: var(--base); top: var(--base);}
+  .figure12 {left: var(--base); top: var(--base)*2;}
+  .figure22 {left: var(--base)*2; top: var(--base)*2;}
+}

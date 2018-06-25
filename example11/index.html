@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pentamino</title>
+    <script src="jquery-2-2-4.js"></script>
+    <script src="myscript.js"></script>
+    <link rel="stylesheet" href="style-withoutless.css">
+</head>
+<body>
+    <div class="page page-game current">
+        <div class="field"></div>
+    </div>
+    <div class="page page-option hidden">
+        <div class="profchoose">
+            <div class="formcont">
+                <p>Введите номер поля:</p>
+				<input type="text" name="height" placeholder="3 , 4, 5, 6" id="fieldHeight" class="row">
+                <p>Х</p>
+                <input type="text" name="width"  placeholder="столбцы" id="fieldWidth" class="columns hidden">
+                <!--<p>Х</p>-->
+                <input type="text" name="base_size" placeholder="размер клетки" id="baseSize" class="baseSize">
+                <br>
+                <br>
+                <input type="submit" value="Принять" id="fieldSizeButton" class="submit">
+            </div>
+        </div>
+    </div>
+    <div class="page page-rules hidden">
+		<div class="flipcard h number1">
+			<div class="front">
+				<p class="image"><img src="marker-1.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">ЛКМ 1 короткий клик(Фигура выполняет поворот).</p>
+			</div>
+		</div>
+		<div class="flipcard h number2">
+			<div class="front">
+				<p class="image"><img src="marker-2.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">Зажать ЛКМ (Передвежение фигуры).</p>
+			</div>
+		</div>
+		<div class="flipcard h number3">
+			<div class="front">
+				<p class="image"><img src="marker-31.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">Зажать Shift и Кликнуть ЛКМ (фигура отзеркаливается).</p>
+			</div>
+		</div>
+		<div class="flipcard h number4">
+			<div class="front">
+				<p class="image"><img src="marker-41.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">Собрать все поле без единого пропуска(Вы выиграли).</p>
+			</div>
+		</div>
+    </div>
+    <div class="page page-authors hidden">
+		<h1 class="future">To be soon...</h1>
+	</div>
+    <div class="logo">Pentamino</div>
+    <div class="menu hidden">
+        <ul>
+            <li class="menu-game">Играть</li>
+            <li class="menu-option">Настройки</li>
+            <li class="menu-rules">Правила</li>
+            <li class="menu-authors">Об авторах</li>
+        </ul>
+    </div>
+    <div class="message hidden">
+        <div class="message-text">
+            Congratulations, you won!
+        </div>
+        <div class="close-button">
+            <div class="text-button">Закрыть</div>
+        </div>
+    </div>
+</body>
+</html>
