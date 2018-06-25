@@ -1,0 +1,75 @@
+body {
+    --base: 50px;
+    --border_width: 4px;
+    --offset_field_top: var(--base);
+    --offset_field_left: var(--base);
+    background-color: #eee;
+}
+
+.logo {top: calc(var(--base)*1); right: calc(var(--base)*1); position: absolute; width: 150px; background-color: #000; padding: 12px; color: #fff; text-align: center; font-size: 32px; border-radius: 45px; line-height: 100%; user-select: none; transition: color 0.7s ease;}
+
+.logo:hover {cursor: pointer; color: #f00;}
+.menu {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 270px; height: 320px; background-color: #000; font-size: 32px; border-radius: 45px; user-select: none;}
+.menu ul {list-style: none; text-align: center; padding: 10px;}
+.menu ul li {padding: 10px; color: #fff; transition: color 0.5s ease;}
+.menu ul li:hover {cursor: pointer; color: #f00;}
+.hidden {display: none;}
+
+.profchoose {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 1px; height: 500px; width: 500px; background-color: #000; color: #fff; text-align: center; user-select: none; border-radius: 45px;}
+.profchoose .formcont {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 32px;}
+.profchoose .formcont .columns {border-radius: 45px; text-align: center; background-color: #fff; transition: background-color 0.7s ease; font-size: 22px;}
+.profchoose .formcont .columns:hover {background-color: #f00;}
+.profchoose .formcont .row {border-radius: 45px; text-align: center; background-color: #fff; transition: background-color 0.7s ease; font-size: 22px;}
+.profchoose .formcont .row:hover {background-color: #f00;}
+.profchoose .formcont .baseSize {border-radius: 45px; text-align: center; background-color: #fff; transition: background-color 0.7s ease; font-size: 22px;}
+.profchoose .formcont .baseSize:hover {background-color: #f00;}
+.profchoose .formcont .submit {border-radius: 45px; height: 40px; width: 200px; background-color: #fff; color: #000; text-align: center; transition: background-color 0.7s ease; font-size: 22px;}
+.profchoose .formcont .submit:hover {background-color: #f00;}
+
+.flipcard {position: absolute; width: 340px; height: 340px; perspective: 300px; user-select: none;}
+.flipcard.number1 {top: 50px; left: 50px;}
+.flipcard.number2 {top: 50px; left: 440px;}
+.flipcard.number3 {top: 440px; left: 50px;}
+.flipcard.number4 {top: 440px; left: 440px;}
+.flipcard p {position: absolute; text-align: center;}
+.flipcard.v:hover .front, .flipcard.v.flip .front {transform: rotateX(180deg);}
+.flipcard.v:hover .back, .flipcard.v.flip .back {transform: rotateX(0deg);}
+.flipcard.v .back {transform: rotateX(-180deg);}
+.flipcard.h:hover .front, .flipcard.h.flip .front {transform: rotateY(180deg);}
+.flipcard.h:hover .back, .flipcard.h.flip .back {transform: rotateY(0deg);}
+.flipcard.h .back {transform: rotateY(-180deg);}
+.flipcard .front, .flipcard .back {position: absolute; width: 100%; height: 100%; box-sizing: border-box; transition: all 1s ease-in; color: white; background-color: #000; padding: 20px; backface-visibility: hidden;}
+.text-rule {top: 40%;}
+.image {top: 5px;}
+
+.page-game {width: 100%; height: 1200px;}
+.filter {filter: blur(15px) grayscale(100%) brightness(100%); pointer-events: none;}
+.comment {opacity: 0; position: absolute; bottom: -150px; width: 100%; background-color: #000; color: #fff; text-align: center; transition: opacity 2s ease;}
+.hsquare .comment {opacity: 1;}
+.rotate1 {transform: rotate(0deg);}
+.rotate2 {transform: rotate(90deg);}
+.rotate3 {transform: rotate(180deg);}
+.rotate4 {transform: rotate(270deg);}
+.colored {background-color: #0ff; transform: rotate(90deg);}
+.mirrorcont {transition: all 0.7s ease;}
+.mirror {transform: scale(-1, 1);}
+
+.future {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 72px; user-select: none; color: #000; transition: color 2s ease;}
+.future:hover {color: #f00;}
+
+.message {width: 25%; height: 25%; position: fixed; font-family: Arial sans-serif; background-color: #000; top: 50%; left: 50%; user-select: none; transform: translate(-50%, -50%); padding: 20px; box-shadow: rgba(0,0,0,0.4) 10px 10px 30px; border-radius: 45px;}
+.message .message-text {font-size: 32px; text-align: center; color: #fff;}
+.message .close-button {text-align: center; font-size: 16px; width: 40%; height: 50px; position: absolute; background-color: #fff; bottom: 15%; left: 30%; border-radius: 45px;  transition: background-color 1s ease;}
+.message .close-button .text-button {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.message .close-button:hover {background-color: #f00;}
+
+.message.hidden {opacity: 0; pointer-events: none;}
+
+.field { position: absolute; top: calc(var(--offset_field_top) - var(--border_width)); left: calc(var(--offset_field_left) - var(--border_width)); border: solid var(--border_width) black; background-color: #ffffff; box-sizing: content-box;}
+.field .fieldblock {width: var(--base); height: var(--base); position: absolute; border: solid 1px #b8b8b8; box-sizing: border-box;}
+.field .highlight {background-color: #fffeb7;}
+
+
+.baseblock {position: absolute; width: var(--base); height: var(--base); pointer-events: auto;}
+.figcont {position: absolute; transition: transform 0.7s ease; pointer-events: none;}
+

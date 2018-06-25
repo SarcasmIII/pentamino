@@ -3,130 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Pentamino</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="jquery-2-2-4.js"></script>
     <script src="myscript.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-withoutless.css">
 </head>
 <body>
-    <div class="container">
+    <div class="page page-game current">
         <div class="field"></div>
-        <div class="figcont fig1 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure20"></div>
-                <div class="baseblock figure21"></div>
-                <div class="baseblock figure22"></div>
-            </div>
-        </div>
-        <div class="figcont fig2 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure20"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure12"></div>
-            </div>
-        </div>
-        <div class="figcont fig3 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure02"></div>
-                <div class="baseblock figure03"></div>
-                <div class="baseblock figure04"></div>
-            </div>
-        </div>
-        <div class="figcont fig4 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure20"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure12"></div>
-            </div>
-        </div>
-        <div class="figcont fig5 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure02"></div>
-                <div class="baseblock figure03"></div>
-                <div class="baseblock figure13"></div>
-            </div>
-        </div>
-        <div class="figcont fig6 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure02"></div>
-                <div class="baseblock figure12"></div>
-                <div class="baseblock figure13"></div>
-            </div>
-        </div>
-        <div class="figcont fig7 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure12"></div>
-            </div>
-        </div>
-        <div class="figcont fig8 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure21"></div>
-                <div class="baseblock figure20"></div>
-            </div>
-        </div>
-        <div class="figcont fig9 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure21"></div>
-                <div class="baseblock figure22"></div>
-            </div>
-        </div>
-        <div class="figcont fig10 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure21"></div>
-                <div class="baseblock figure12"></div>
-            </div>
-        </div>
-        <div class="figcont fig11 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure01"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure12"></div>
-                <div class="baseblock figure13"></div>
-            </div>
-        </div>
-        <div class="figcont fig12 rotate1">
-            <div class="mirrorcont">
-                <div class="baseblock figure00"></div>
-                <div class="baseblock figure10"></div>
-                <div class="baseblock figure11"></div>
-                <div class="baseblock figure12"></div>
-                <div class="baseblock figure22"></div>
-            </div>
-        </div>
+    </div>
+    <div class="page page-option hidden">
         <div class="profchoose">
             <div class="formcont">
-                <h4>Введите размер поля:</h4>
-                <input type="text" name="width"  placeholder="столбцы" id="fieldWidth">
+                <p>Введите номер поля:</p>
+				<input type="text" name="height" placeholder="3 , 4, 5, 6" id="fieldHeight" class="row">
                 <p>Х</p>
-                <input type="text" name="height" placeholder="рядки" id="fieldHeight">
+                <input type="text" name="width"  placeholder="столбцы" id="fieldWidth" class="columns hidden">
+                <!--<p>Х</p>-->
+                <input type="text" name="base_size" placeholder="размер клетки" id="baseSize" class="baseSize">
                 <br>
-                <input type="submit"  value="Принять" id="fieldSizeButton">
+                <br>
+                <input type="submit" value="Принять" id="fieldSizeButton" class="submit">
             </div>
+        </div>
+    </div>
+    <div class="page page-rules hidden">
+		<div class="flipcard h number1">
+			<div class="front">
+				<p class="image"><img src="marker-1.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">ЛКМ 1 короткий клик(Фигура выполняет поворот).</p>
+			</div>
+		</div>
+		<div class="flipcard h number2">
+			<div class="front">
+				<p class="image"><img src="marker-2.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">Зажать ЛКМ (Передвежение фигуры).</p>
+			</div>
+		</div>
+		<div class="flipcard h number3">
+			<div class="front">
+				<p class="image"><img src="marker-31.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">Зажать Shift и Кликнуть ЛКМ (фигура отзеркаливается).</p>
+			</div>
+		</div>
+		<div class="flipcard h number4">
+			<div class="front">
+				<p class="image"><img src="marker-41.png"></p>
+			</div>
+			<div class="back">
+				<p class="text-rule">Собрать все поле без единого пропуска(Вы выиграли).</p>
+			</div>
+		</div>
+    </div>
+    <div class="page page-authors hidden">
+		<h1 class="future">To be soon...</h1>
+	</div>
+    <div class="logo">Pentamino</div>
+    <div class="menu hidden">
+        <ul>
+            <li class="menu-game">Играть</li>
+            <li class="menu-option">Настройки</li>
+            <li class="menu-rules">Правила</li>
+            <li class="menu-authors">Об авторах</li>
+        </ul>
+    </div>
+    <div class="message hidden">
+        <div class="message-text">
+            Congratulations, you won!
+        </div>
+        <div class="close-button">
+            <div class="text-button">Закрыть</div>
         </div>
     </div>
 </body>
